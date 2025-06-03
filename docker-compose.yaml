@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  bot:
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - GUILD_ID=${GUILD_ID}
+      - ENV="production"
+    image: serverbot
+    build:
+      context: .
+      dockerfile: Dockerfile
